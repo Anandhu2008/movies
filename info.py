@@ -18,7 +18,7 @@ API_HASH = environ.get('API_HASH', '7f5a95a95508059acc07a7c3e3697081')
 BOT_TOKEN = environ.get('BOT_TOKEN', '7791060079:AAGuAG39lXUQJl91EMlKhhFUwVbRP4XODp4')
 #---------------------------------------------------------------
 #---------------------------------------------------------------
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5665677555').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '2029482770').split()]
 USERNAME = environ.get('USERNAME', "https://t.me/anandhuyoooo") # ADMIN USERNAME
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002381851296'))
 MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', '1002271573475')
@@ -129,15 +129,6 @@ SETTINGS = {
             'shortner_three': SHORTENER_WEBSITE3,
             'api_three': SHORTENER_API3,
             'third_verify_time': THREE_VERIFY_GAP
-    
-FROM python:3.10
 
-RUN apt update && apt upgrade -y
-RUN apt install git -y
-COPY requirements.txt /requirements.txt
-
-RUN cd /
-RUN pip install -U pip && pip install -U -r requirements.txt
-WORKDIR /app
 
 }
